@@ -1,0 +1,31 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Eye Defect Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <h1 class="title">Eye Defect Detection</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="upload-container">
+            <input type="file" name="image" id="image-upload" accept="image/*" style="display: none;">
+            <label for="image-upload" class="upload-label">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <span class="upload-text">Choose Image</span>
+            </label><br>
+            <button type="button" id="capture-btn" class="capture-btn"><i class="fas fa-camera"></i> Take Picture</button>
+            <center><div id="image-preview-container"></div></center>
+            <br>
+            <input type="submit" value="Detect" class="detect-btn">
+        </div>
+    </form>
+
+    <footer class="footer">
+        <p class="footer-text">Final Year Project</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
